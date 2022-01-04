@@ -65,7 +65,6 @@ def main(weight_dir, config_path):
 
         # inference
         test_preds += inference(model, test_dataloader)
-        break
 
     test_preds /= config.n_splits
     test_df["label"] = test_preds
