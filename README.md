@@ -3,10 +3,10 @@
 ## Requiremnts
 下記の環境で動作確認済みです
 <pre>
-OS: Ubuntu20.04
-CPU: Intel 10700K
-GPU: NVIDIA RTX3070 8GB
-RAM: 64GB
+OS: Ubuntu18.04.5 LTS 
+CPU: Intel(R) Xeon(R) CPU @ 2.20GHz
+GPU: A100-SXM4-40GB
+RAM: 85GB
 
 Docker
 docker-compose
@@ -37,6 +37,7 @@ nvidia-docker
 </pre>
 
 ## Build
+※Dockerfile, docker-compose.yml作成中.
 ```
 git clone https://github.com/tubo213/signate_technopro.git
 cd signate_technopro
