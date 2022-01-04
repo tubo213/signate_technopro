@@ -1,4 +1,4 @@
 #!/bin/bash
-python src/preprocess.py
-python src/train.py
-python src/submit.py
+python ./techno/src/preprocess.py
+python ./techno/src/train.py
+python ./techno/src/submit.py
