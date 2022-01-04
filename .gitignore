@@ -1,0 +1,10 @@
+*png
+*jpg
+*tsv
+*csv
+*zip
+*events.*
+*ckpt
+
+.venv/
+.vscode/

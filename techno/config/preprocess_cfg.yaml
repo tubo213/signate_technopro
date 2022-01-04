@@ -1,0 +1,6 @@
+input: ../data
+output: ../output/preprocess
+seed: 3090
+params: 
+  num_clusters: 5
+  threshold: 95
