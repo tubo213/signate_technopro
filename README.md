@@ -61,7 +61,7 @@ python ./techno/src/preprocess.py -c hoge.yaml
 ```
 
 ### Training
-疑似ラベルを繰り返し行います．
+疑似ラベリングと学習を繰り返し行います．
 ```
 python ./techno/src/train.py
 ```
