@@ -9,10 +9,12 @@ import timm
 import torch
 import yaml
 from box import Box
+from models.augmentation import get_default_transforms
+from models.dataset import CustomDataset
 from PIL import Image
 from sklearn.cluster import KMeans
 from sklearn.mixture import GaussianMixture
-from torchvision import transforms as T
+from torch.utils.data import DataLoader
 from tqdm import tqdm
 from utils import seed_torch
 
@@ -110,17 +112,20 @@ def get_img_hash(df: pd.DataFrame) -> np.ndarray:
         .to(DEVICE)
         .eval()
     )
-    for path in tqdm(df["path"]):
+    hash_dataset = CustomDataset(df[["path"]], image_size=224)
+    hash_dataloader = DataLoader(
+        hash_dataset, batch_size=128, shuffle=False, pin_memory=False, drop_last=False
+    )
+    transform = get_default_transforms()
 
-        image = Image.open(path)
-        image = T.ToTensor()(image).to(DEVICE).unsqueeze(0)
+    for image in tqdm(hash_dataloader):
+        image = transform["val"](image).to(DEVICE)
 
         image_emb = model(image)
         image_emb = image_emb.to("cpu").detach().numpy().copy()
-
         hashes.append(image_emb)
 
-    return np.array(hashes).reshape(len(df), -1)
+    return np.concatenate(hashes, axis=0).reshape(len(df), -1)
 
 
 def estimate_texture(img_hash: np.ndarray) -> np.array:
