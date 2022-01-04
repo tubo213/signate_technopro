@@ -194,8 +194,6 @@ def main(config_path):
 
     # dataload
     train_df, pseudo_df = load_all_data(config)
-    train_df = train_df.head(20)
-    pseudo_df = pseudo_df.head(20)
 
     # training 閾値を小さくしながら疑似ラベルを蒸留して学習
     for threshold in config.thresholds:
