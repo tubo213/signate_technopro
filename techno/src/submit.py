@@ -69,7 +69,7 @@ def main(weight_dir, config_path):
     test_preds /= config.n_splits
     test_df["label"] = test_preds
     test_df[["id", "label"]].to_csv(
-        output_dir / "submission.tsv", index=False, header=None
+        output_dir / "submission.tsv", index=False, header=None, sep="\t"
     )
 
 
