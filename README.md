@@ -29,7 +29,6 @@ nvidia-docker
     ├── output
     ├── run.sh
     └── src
-        ├── __pycache__
         ├── models
         ├── preprocess.py
         ├── submit.py
@@ -39,6 +38,8 @@ nvidia-docker
 
 ## Build
 ```
+git clone https://github.com/tubo213/signate_technopro.git
+cd signate_technopro
 docker-compose up
 ```
 
