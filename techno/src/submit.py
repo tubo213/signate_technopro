@@ -5,23 +5,10 @@ import click
 import numpy as np
 import pandas as pd
 import torch
-import yaml
-from box import Box
 from models.dataset import CustomDataset
 from models.model import Model, inference
 from torch.utils.data import DataLoader
-
-
-def load_config(config_path) -> Box:
-    """configの読み込み
-
-    Returns:
-        Box: config
-    """
-    with open(config_path, "r") as yml:
-        config = yaml.safe_load(yml)
-    config = Box(config)
-    return config
+from utils import load_config
 
 
 def load_test_df(config):

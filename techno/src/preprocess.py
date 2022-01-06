@@ -7,8 +7,6 @@ import numpy as np
 import pandas as pd
 import timm
 import torch
-import yaml
-from box import Box
 from models.augmentation import get_default_transforms
 from models.dataset import CustomDataset
 from PIL import Image
@@ -16,27 +14,12 @@ from sklearn.cluster import KMeans
 from sklearn.mixture import GaussianMixture
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from utils import seed_torch
+from utils import load_config, seed_torch
 
 
 ##########################
 # Setup
 ##########################
-def load_config(config_path: str) -> Box:
-    """configの読み込み
-
-    Args:
-        config_path (str): 設定ファイルへのパス
-
-    Returns:
-        Box: 設定
-    """
-    with open(config_path, "r") as yml:
-        config = yaml.safe_load(yml)
-    config = Box(config)
-    return config
-
-
 def setup(config_path: str) -> None:
     """初期設定
 

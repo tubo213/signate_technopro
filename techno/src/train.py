@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 import pytorch_lightning as pl
 import torch
-import yaml
 from box import Box
 from models.dataset import CustomDataModule, CustomDataset
 from models.model import Model, inference
@@ -17,26 +16,12 @@ from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.utilities.seed import seed_everything
 from sklearn.model_selection import StratifiedKFold
 from torch.utils.data import DataLoader
+from utils import load_config
 
 
 ##########################
 # Setup
 ##########################
-def load_config(config_path: str) -> Box:
-    """設定の読み込み
-
-    Args:
-        config_path (str): 設定ファイルへのパス
-
-    Returns:
-        Box: 設定
-    """
-    with open(config_path, "r") as yml:
-        config = yaml.safe_load(yml)
-    config = Box(config)
-    return config
-
-
 def setup(config_path: str) -> Box:
     """初期設定
 
