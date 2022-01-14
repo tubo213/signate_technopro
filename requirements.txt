@@ -1,0 +1,10 @@
+japanize_matplotlib
+category_encoders
+shap
+scikit-learn==1.0.1
+timm
+python-box
+pytorch-lightning==1.4.0 
+grad-cam 
+ttach 
+pytorch_forecasting

@@ -1,16 +1,17 @@
 # SIGNATE Techno pro
 
-## Requiremnts
+## Enviroment
 下記の環境で動作確認済みです
 <pre>
-OS: Ubuntu18.04.5 LTS 
+OS: Ubuntu20.04 LTS 
 CPU: Intel(R) Xeon(R) CPU @ 2.20GHz
-GPU: A100-SXM4-40GB
-RAM: 85GB
+GPU: NVIDIA RTX3070 8GB
+RAM: 64GB
 
-Docker
-docker-compose
-nvidia-docker
+CUDA: 11.3
+Docker: 20.10.9
+docker-compose: 1.29.2
+nvidia-docker: 2.8.0
 </pre>
 
 ## Directory Tree
@@ -37,11 +38,10 @@ nvidia-docker
 </pre>
 
 ## Build
-※Dockerfile, docker-compose.yml作成中.
 ```
 git clone https://github.com/tubo213/signate_technopro.git
 cd signate_technopro
-docker-compose up
+docker-compose up -d
 ```
 
 ## How to Run
@@ -84,5 +84,10 @@ python ./techno/src/submit.py -d ../output/exp_001/swin_tiny_patch4_window7_224/
 最終submission fileは下記コマンドで作成できます．
 
 ```
-./techno/run.sh
+bash ./techno/run.sh
 ```
+
+## References
+
+- Yisen Wang, Xingjun Ma, Zaiyi Chen, Yuan Luo, Jinfeng Yi, James Bailey Symmetric Cross Entropy for Robust Learning with Noisy Labels https://arxiv.org/abs/1908.06112 16 Aug 2019
+- https://www.kaggle.com/phalanx/train-swin-t-pytorch-lightning
