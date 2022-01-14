@@ -59,7 +59,7 @@ ENV PATH /root/.local/bin:$PATH
 #############################################
 # Library
 #############################################
-COPY pyproject.toml ./
+COPY pyproject.toml poetry.lock ./
 RUN poetry config virtualenvs.create false && \
     poetry install
 
