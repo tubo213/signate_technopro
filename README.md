@@ -1,10 +1,10 @@
-# SIGNATE Techno pro
+# SIGNATE Techno pro 2nd place solution
 
 ## Enviroment
 下記の環境で動作確認済みです
 <pre>
 OS: Ubuntu20.04 LTS 
-CPU: Intel(R) Xeon(R) CPU @ 2.20GHz
+CPU: Intel Corei7 10700k
 GPU: NVIDIA RTX3070 8GB
 RAM: 64GB
 
@@ -89,6 +89,6 @@ bash ./techno/run.sh
 ```
 
 ## References
-
+- https://signate.jp/courses/OYGzkg6XZYWldZ3N/leaderboard
 - Yisen Wang, Xingjun Ma, Zaiyi Chen, Yuan Luo, Jinfeng Yi, James Bailey Symmetric Cross Entropy for Robust Learning with Noisy Labels https://arxiv.org/abs/1908.06112 16 Aug 2019
 - https://www.kaggle.com/phalanx/train-swin-t-pytorch-lightning
