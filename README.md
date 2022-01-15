@@ -1,4 +1,4 @@
-# SIGNATE Techno pro 2nd place solution
+# SIGNATE TECHNOPRO 2nd place solution
 
 ## Enviroment
 下記の環境で動作確認済みです
