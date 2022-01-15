@@ -1,5 +1,8 @@
 # SIGNATE TECHNOPRO 2nd place solution
 
+- SIGNATE TECHNOPROコンペの最終submissionコードです。
+- 解法自体は[こちら](https://docs.google.com/presentation/d/1BYuW5Qwg916QPBuMg0fH6RaV_pFs9Yw32osqBBzNvfs/edit?usp=sharing)に記載しています。
+
 ## Enviroment
 下記の環境で動作確認済みです
 <pre>
