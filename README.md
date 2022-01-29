@@ -2,6 +2,7 @@
 
 - SIGNATE TECHNOPROコンペの最終submissionコードです。
 - 解法自体は[こちら](https://docs.google.com/presentation/d/1BYuW5Qwg916QPBuMg0fH6RaV_pFs9Yw32osqBBzNvfs/edit?usp=sharing)に記載しています。
+- 一次審査(signate上での順位)時点では2位でしたが、二次審査(解法発表)までの総合順位で1位となりました。
 
 ## Enviroment
 下記の環境で動作確認済みです
